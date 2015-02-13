@@ -1,0 +1,25 @@
+{ "MessageSystems" : {
+	"name": "OpenStack",
+	"url": "https://openstack.int.messagesystems.com"
+	}
+},
+{
+"name": "Icinga Monitoring",
+"url": "https://netmon.int.messagesystems.com/icinga/"
+},
+{
+"name": "Bamboo",
+"url": "https://bamboo.int.messagesystems.com/allPlans.action"
+},
+{
+"name": "Bamboo Admin",
+"url": "https://bamboo.int.messagesystems.com/admin/administer.action"
+},
+{
+"name": "Confluence OpenStack Docs",
+"url": "https://confluence.int.messagesystems.com/display/ENG/OpenStack+Architecture"
+},
+{
+"name": "Confluence Bamboo/CI Docs",
+"url": "https://confluence.int.messagesystems.com/display/ENG/Bamboo+Agent+Matrix"
+}

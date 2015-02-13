@@ -1,0 +1,97 @@
+#main_content{
+ margin-left: auto;
+ margin-right: auto;
+ width: 63em;
+}
+h1 {
+ font-weight: bold;
+ font-size: 1.2em;
+ text-align: center;
+ background: url('images/logo_big.png');
+ background-repeat: no-repeat;
+ height:25px;
+}
+div#launcher {
+ margin: 0;
+ padding: 0;
+ width: 100%;
+}
+div#launcher div.section {
+ margin: 0;
+ padding: 0.5em;
+ background: #ededed;
+ margin-bottom: 1em;
+ border-top: 1px solid #cdcdcd;
+ border-left: 1px solid #bcbcbc;
+ border-bottom: 1px solid #000000;
+ border-right: 1px solid #000000;
+ border-bottom-right-radius: 10px;
+ border-bottom-left-radius: 10px;
+ overflow: auto;
+}
+div#launcher div.section h3 {
+ clear: both;
+ margin: 0;
+ padding: 0.2em;
+ padding-bottom: 0;
+ font-size: 1em;
+ font-weight: bold;
+ background: #dedede;
+ border: 0;
+}
+div#launcher ul {
+ margin: 0;
+ padding: 0.5em;
+ background: #ededed;
+ margin-bottom: 1em;
+ overflow: auto;
+}
+div#launcher li {
+ margin: 0;
+ padding: 0;
+ border-radius: 10px;
+ height: 72px;
+ width: 72px;
+ float: left;
+ list-style-type: none;
+ border: 1px solid;
+ margin-top: 0.3em;
+ margin-left: 0.3em;
+ margin-right: 1.7em;
+ margin-bottom: 2em;
+ font-size: 0.7em;
+ font-weight: bold;
+ text-align: center;
+ background-image: url( 'images/generic.png' );
+}
+div#launcher a{
+ width: 72px;
+ height: 90px;
+ overflow: hidden;
+ white-space: nowrap;
+ display: block;
+ position: absolute;
+}
+div#launcher a span{
+ color: #000;
+ display: block;
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 72px;
+ text-align: center;
+}
+div#launcher h2 {
+ clear: both;
+ border-top-right-radius: 10px;
+ border-top-left-radius: 10px;
+ margin: 0;
+ padding: 0.2em;
+ font-size: 1.1em;
+ font-weight: bold;
+ background: #cdcdcd;
+ border-top: 1px solid #efefef;
+ border-left: 1px solid #bcbcbc;
+ border-bottom: 0;
+ border-right: 1px solid #000000;
+}

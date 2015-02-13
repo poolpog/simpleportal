@@ -1,0 +1,54 @@
+## SEE: README.txt in the root dir of this project
+Corporate Systems:
+    portal:
+        url: https://portal.example.com/
+        url_linkname: Corporate Portal
+        description: Corporate Portal includes information updated by HR etc
+    it-helpdesk:
+        url: https://helpdesk.example.com/
+        url_linkname: IT Helpdesk
+        description: IT Helpdesk and support for corp systems
+    webmail:
+        url: https://mail.example.com
+        url_linkname: Hosted Webmail
+        description: Webmail
+    password-change:
+        url: https://password.example.com
+        url_linkname: Password Management
+        description:  Change your corporate LDAP password and manage your internal identity
+Ops:
+    openstack:
+        url: https://openstack.example.com
+        url_linkname: OpenStack
+        description: Openstack UI for managing VMs and other resources
+    monitor:
+        url: https://monitior.example.com
+        url_linkname: Monitoring Service
+        description: Operatins monitoring - uptime, trends, alerting
+Engineering:
+    bamboo:
+        url: https://bamboo.example.com
+        url_linkname: Bamboo
+        description: Bamboo build and continuous integration service
+    jira:
+        url: https://jira.example.com
+        url_linkname: JIRA Dashboard
+        description: JIRA incident bug and issue management
+    fisheye:
+        url: https://fisheye.example.com
+        url_linkname: Fisheye Dashboard
+        description: Fisheye code introspection tool
+Documentation:
+    confluence:
+        url: https://confluence.example.com
+        url_linkname: Confluence Dashboard
+        description: Engineering documentation wiki
+HR:
+    payroll:
+        url: https://payroll.example.com
+        url_linkname: Payroll Portal
+        description: Your payroll information
+    benefits:
+        url: https://benefits.example.com
+        url_linkname: Company Benefits Portal
+        description: Your benefits management portal

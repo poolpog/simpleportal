@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=ISO-8859-1">
+<title>Message Systems Bookmarks</title>
+<script type="text/javascript" src="lib/js/yaml.js/bin/yaml.js"></script>
+<link rel="stylesheet" type="text/css" href="styles-tabbed.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<!--
+To add new items, there are two steps:
+ 1) add the item to items.yml using YAML format
+ 2) Add an image to the images/ directory.
+
+EXAMPLE, using "foobar" as the new item:
+===== (this line is not part of the example)
+    foobar:
+        url: http://foobar.messagesystems.com/
+        url_linkname: Foobar Service Configuration
+        description: This is the Foobar service
+        sort_order: 1
+===== (this line is not part of the example)
+
+IMAGE GUIDLINES
+ - If you don't have an image, copy "generic.png".
+ - Image should be named "thing.png" where "thing" is the item name - "foobar" in the example that follows
+
+NOTES
+ - url is the link to the service
+ - url_linkname is the thing that has the hyperlink attached. Keep it short! (e.g. url and url_linkname work like so: <a href='url'>url_linkname</a>)
+ - description is a longer description, with details. Less than 200 characters.
+ - sort_order is used to set arbitrary sorting. Optional. Defaults to 50. Legal values are from 0 to 99. 0 sorts at the top of the list.
+-->
+<body>
+<div id="main_content">
+	<h1>Message Systems Bookmarks</h1>
+	<div id="launcher">
+		<h2>LABEL</h2>
+		<div class='section'>
+		<ul class="item_list">
+		</ul>
+		</div>
+	</div>
+</div>
+<div id="footer_div"><div id="footer_content">All bookmarks open in a new window. To request a new bookmark, please email <a href='mailto:jeff.silverman@messagesystems.com'>jeff.silverman@messagesystems.com</a>.</div></div>
+
+<script type="text/javascript" >
+var categories = YAML.load('items.yml')
+var things = ''
+var launcher_contents = ''
+var selected_tab_bg = "#ededed"
+var unselected_tab_bg = "#cdcdcd"
+
+function selectTab( tab ){
+    for ( var category in categories ){
+        var t = document.getElementById("tab_"+category)
+        var s = document.getElementById("section_"+category)
+        t.style.background=unselected_tab_bg
+        t.style.zIndex=-1000
+        s.style.zIndex=-1000
+    }
+    var t = document.getElementById("tab_"+tab)
+    var s = document.getElementById("section_"+tab)
+    t.style.backgroundColor=selected_tab_bg
+    s.style.backgroundColor=selected_tab_bg
+    t.style.zIndex=20000
+    s.style.zIndex=1000
+}
+
+for ( var category in categories ){
+    launcher_contents += "<h2 class='tab' id='tab_"+category+"'><a href='#"+category+"'  onClick=\"selectTab('"+category+"'); blur();\">"+category+"</a></h2>"
+    launcher_contents += "<div class='section' id='section_"+category+"'>"
+    launcher_contents += "<ul>"
+    var i = 0
+    var il = new Array()
+    for ( var item in categories[category] ){
+        il[i++] = item
+    }
+    il.sort()
+    for ( var item in il ){
+        var description =     ( categories[category][il[item]]['description'] ? categories[category][il[item]]['description'] : "" )
+        var url_linkname = categories[category][il[item]]['url_linkname']
+        launcher_contents += "<li>"
+        launcher_contents += "<a class='bookmark' target='_blank' href='"+categories[category][il[item]]['url']+"'>"
+        launcher_contents += "<div class='icon' id='"+category+"_"+il[item]+"_icon'>"
+        launcher_contents += " <div class='bookmark_details'>"
+        launcher_contents += "  <div class='bookmark_linkname'>"
+        launcher_contents +=     url_linkname
+        launcher_contents += "  </div>"
+        launcher_contents += "  <div class='bookmark_description'>"
+        launcher_contents +=     description
+        launcher_contents += "  </div>"
+        launcher_contents += " </div>"
+        launcher_contents += "</div>"
+        launcher_contents += "</a>"
+        launcher_contents += "</li>"
+    }
+    launcher_contents += "</ul>"
+    launcher_contents += "</div>"
+}
+
+launcher=document.getElementById("launcher")
+launcher.innerHTML = launcher_contents
+
+    var i = 1
+for ( var category in categories ){
+    for ( var item in categories[category] ){
+        var imgsrc = "images/"+item+".png"
+        var the_image = new Image()
+        var bgimage = document.getElementById(category+"_"+item+"_icon")
+        the_image.onload = function (x){
+            return
+        }
+        the_image.onerror = function (x) {
+            this.src = "images/generic.png"
+        }
+        the_image.src = imgsrc
+        bgimage.style.backgroundImage =  "url( '"+the_image.src+"')"
+        bgimage.style.backgroundRepeat =  "no-repeat"
+
+    }
+}
+
+setTimeout(function(){
+   window.location.reload(1);
+}, ( 1000 * 60 * 60 * 4 ) ); // reload every four hours
+
+
+var out=""
+var i = 0
+for ( var category in categories ){
+    first_category =  category
+    i++
+    if ( i > 0 ) break
+}
+var hash = window.location.hash
+if ( hash != "" ){
+    first_category = hash.slice(1)
+}
+
+selectTab(first_category)
+
+</script>
+</body>
+</html>

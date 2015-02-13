@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+/*
+font-family: 'Ubuntu', sans-serif;
+*/
+font-family: 'Open Sans', sans-serif;
+}
+#main_content{
+ margin-left: auto;
+ margin-right: auto;
+ width: 63em;
+}
+h1 {
+ font-weight: bold;
+ font-size: 1.2em;
+ text-align: center;
+ background: url('images/logo.jpg');
+ background-repeat: no-repeat;
+ height:25px;
+}
+div#launcher {
+ margin: 0;
+ padding: 0;
+ width: 63em;
+ position: absolute;
+}
+div#launcher div.section {
+ margin: 0;
+ padding: 0;
+ background: #ededed;
+ margin-bottom: 1em;
+ border-bottom: 1px solid #999999;
+ border-right: 1px solid #999999;
+ border-bottom-right-radius: 10px;
+ border-bottom-left-radius: 10px;
+ border-top-right-radius: 10px;
+ overflow: auto;
+ position: absolute;
+ top: 33px;
+ left: 0px;
+ height: 600px;
+ width: 63em;
+}
+div#launcher div.section h3 {
+ clear: both;
+ margin: 0;
+ padding: 0.2em;
+ padding-bottom: 0;
+ font-size: 1em;
+ font-weight: bold;
+ background: #dedede;
+ border: 0;
+}
+div#launcher ul {
+ margin: 0;
+ padding: 0.5em;
+ background: #ededed;
+ margin-bottom: 1em;
+ overflow: auto;
+}
+div#launcher li {
+ margin: 0;
+ padding: 0;
+ border-radius: 15px;
+ height: 86px;
+ width:45%;
+ float: left;
+ list-style-type: none;
+ border-right: 1px solid #bcbcbc;
+ border-bottom: 1px solid #bcbcbc;
+ margin: 1em;
+ text-align: center;
+ background: #dedede;
+}
+div#launcher li:hover {
+ background: #ababab;
+}
+div#launcher li div.icon {
+ margin: 6px;
+ padding: 0;
+ border-radius: 10px;
+ height: 72px;
+ width: 72px;
+ float: left;
+ list-style-type: none;
+ border-top: 1px solid #efefef;
+ border-left: 1px solid #efefef;
+ border-bottom: 1px solid #333333;
+ border-right: 1px solid #333333;
+ background-image: url( 'images/generic.png' );
+ z-index: 100;
+}
+div#launcher a.bookmark{
+ width:100%;
+ padding: 0;
+ margin: 0;
+ height: 84px;
+ overflow: hidden;
+ display: block;
+}
+div#launcher div.bookmark_linkname{
+ font-weight: bold;
+}
+div#launcher div.bookmark_details{
+ color: #000;
+ margin-left: 86px;
+ position: absolute;
+ width: 35%;
+ text-align: left;
+}
+div#launcher div.bookmark_description{
+    font-size: 80%;
+}
+div#launcher h2.tab {
+ border-top-right-radius: 10px;
+ border-top-left-radius: 10px;
+ margin: 0;
+ margin-right: 3px;
+ padding: 0.3em;
+ padding-left: 0.6em;
+ padding-right: 0.6em;
+ font-size: 1.1em;
+ font-weight: bold;
+ background: #cdcdcd;
+ border-top: 1px solid #efefef;
+ border-right: 1px solid #000000;
+ width: auto;
+ float: left;
+ height: 1.5em;
+}
+div#launcher h2.tab a {
+ text-decoration: none;
+ color: #000;
+}
+.selected {
+    /*
+    border: 1px dotted blue;
+    */
+}
+
+#footer_div{
+    position: absolute;
+    height: 700px;
+    width: 100%;
+    z-index: -10000;
+}
+#footer_content{
+    position: absolute;
+    bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+    height: 2em;
+    background: #aaaaaa;
+    padding-top: 10px;
+    border-top: 1px solid #cccccc;
+}
