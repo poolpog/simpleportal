@@ -29,9 +29,9 @@ The resulting HTML links are arranged in alphabetical order within each panel
 
 The YML contains the following elements for each tab, and each link within a tabbed panel:
 
-The "category" is MANDATORY. The category is the un-indented items.
+The "category" is mandatory. The category is the un-indented items (See example, below).
 
-The "label" is MANDATORY. The label is the first-indented items.
+The "label" is mandatory. The label is the first-indented items (See example, below).
 
 The following bookmark attributes are mandatory
 
