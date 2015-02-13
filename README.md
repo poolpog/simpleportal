@@ -30,10 +30,14 @@ The resulting HTML links are arranged in alphabetical order within each panel
 The YML contains the following elements for each tab, and each link within a tabbed panel:
 
 The "category" is MANDATORY. The category is the un-indented items.
+
 The "label" is MANDATORY. The label is the first-indented items.
+
 The following bookmark attributes are mandatory
-   "url:"
-   "url_linkname:"
+
+*   "url:"
+*   "url_linkname:"
+
 "description:" is optional. But really, you should fill that one in, too.
 
 Example items.yml
