@@ -39,10 +39,8 @@ The following bookmark attributes are mandatory
 Example items.yml
 -----------------
 
-<pre>
-Main:				    <-- Category
-    generic:			<-- label. The icon image should be named after this label. In this example, that would be "generic.png" 
-        url:  "thing"
-        url_linkname:  "thing"
-        description:  "thing"
-</pre>
+    Main:				    <-- Category
+        generic:			<-- label. The icon image should be named after this label. In this example, that would be "generic.png" 
+            url:  "thing"
+            url_linkname:  "thing"
+            description:  "thing"
