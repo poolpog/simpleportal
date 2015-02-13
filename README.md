@@ -17,6 +17,7 @@ Instructions
 ------------
 
 To add or edit links, do this
+
 1.  Edit the YML file "items.yml", per these instructions
 2.  Add an icon image in images/. Use existing images for guidance. *Name the image after the "label" indicated in the
     YML example, below.
